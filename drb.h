@@ -9,5 +9,5 @@ createSymbol(3, ' ');createSymbol(1, '.');printf("\n");createSymbol(1, '.');crea
 createSymbol(1, '.');printf("\n");createSymbol(1, '.');createSymbol(2, ' ');createSymbol(1, '.');
 createSymbol(2, ' ');createSymbol(1, '.');printf("\n");createSymbol(1, ' ');createSymbol(1, '.');
 createSymbol(1, ' ');createSymbol(1, '.');createSymbol(1, ' ');createSymbol(1, '.');printf("\n");
-printf("\n\n");}void main(){printf("\n---------------------\n\n");d_program();
+printf("\n\n");}void d_program();void main(){printf("\n---------------------\n\n");d_program();
 printf("\n\n---------------------\n\n");}

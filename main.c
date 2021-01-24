@@ -581,6 +581,53 @@ void ABCDIncrementPattern()
     }
 }
 
+
+void R_Multiplication()
+{
+    int counter,output = 1;
+    /* Static Multiplication using For loop */
+    printf("\n--------------Static---------------\n");
+    for(counter=1;counter<=8;counter++)
+    {
+        output = output * counter;
+    }
+    printf("The Static Multiplication is : %d", output);
+    /* Dynamic Multiplication using for Loop */
+    printf("\n\n--------------Dynamic--------------\n");
+    int _dynamic;
+    output = 1;
+    printf("Enter the range : ");
+    scanf("%d", &_dynamic);
+    for(counter=_dynamic-_dynamic+1;counter<=_dynamic;counter++)
+    {
+        output = output * counter;
+    }
+    printf("The Dynamic Multiplication is : %d", output);
+    printf("\n\n");
+}
+void R_Subtration()
+{
+    int counter, output=5;
+    /* Static Loop Subtration */
+    printf("\n--------------Static---------------\n");
+    for(counter=output;counter>=1;counter--)
+    {
+        output = output - counter;
+    }
+    printf("Static Subtration is : %d" , output);
+    /* Dynamic Loop Subtration */
+    printf("\n\n--------------Dynamic--------------\n");
+    printf("Enter the range : ");
+    scanf("%d", &output);
+    for(counter=output;counter>=1;counter--)
+    {
+        output = output - counter;
+    }
+    printf("Dynamic Subtration is : %d" , output);
+    printf("\n\n");
+}
+
+
 void d_program()
 {
     printf("Hey there these programs are just for Experimental Purposes!");

@@ -627,8 +627,13 @@ void R_Subtration()
     printf("\n\n");
 }
 
-
 void d_program()
 {
-    printf("Hey there these programs are just for Experimental Purposes!");
+    int a=5;
+    for(; a >= 1; a++)
+    {
+        int b = 4+a;
+        printf("Inside Scope : %d", b);
+    }
+    printf("\nOutside Scope : %d", b);
 }

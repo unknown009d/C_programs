@@ -581,13 +581,12 @@ void ABCDIncrementPattern()
     }
 }
 
-
 void R_Multiplication()
 {
-    int counter,output = 1;
+    int counter, output = 1;
     /* Static Multiplication using For loop */
     printf("\n--------------Static---------------\n");
-    for(counter=1;counter<=8;counter++)
+    for (counter = 1; counter <= 8; counter++)
     {
         output = output * counter;
     }
@@ -598,7 +597,7 @@ void R_Multiplication()
     output = 1;
     printf("Enter the range : ");
     scanf("%d", &_dynamic);
-    for(counter=_dynamic-_dynamic+1;counter<=_dynamic;counter++)
+    for (counter = _dynamic - _dynamic + 1; counter <= _dynamic; counter++)
     {
         output = output * counter;
     }
@@ -607,33 +606,86 @@ void R_Multiplication()
 }
 void R_Subtration()
 {
-    int counter, output=5;
+    int counter, output = 5;
     /* Static Loop Subtration */
     printf("\n--------------Static---------------\n");
-    for(counter=output;counter>=1;counter--)
+    for (counter = output; counter >= 1; counter--)
     {
         output = output - counter;
     }
-    printf("Static Subtration is : %d" , output);
+    printf("Static Subtration is : %d", output);
     /* Dynamic Loop Subtration */
     printf("\n\n--------------Dynamic--------------\n");
     printf("Enter the range : ");
     scanf("%d", &output);
-    for(counter=output;counter>=1;counter--)
+    for (counter = output; counter >= 1; counter--)
     {
         output = output - counter;
     }
-    printf("Dynamic Subtration is : %d" , output);
+    printf("Dynamic Subtration is : %d", output);
     printf("\n\n");
+}
+
+void rsIncrement()
+{
+    int count, inCount, range = 4;
+    for (count = 1; count <= range; count++)
+    {
+        for (inCount = count; inCount <= 4; inCount++)
+            printf("  ");
+        for (inCount = 1; inCount <= count; inCount++)
+            printf("* ");
+        printf("\n");
+    }
+}
+
+void rsDecrement()
+{
+    int count, inCount, range = 4;
+
+    for (count = 1; count <= range; count++)
+    {
+        for (inCount = 1; inCount <= count; inCount++)
+        {
+            printf("  ");
+        }
+        for (inCount = range; inCount >= count; inCount--)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+void ImplicitTypeConversion()
+{
+    // Type Conversion for Promotion
+
+    char x = 'A';
+    int y;
+    y = x; // Implicit Type Conversion
+
+    printf("%c %d", x, y);
+}
+
+void ExplicitTypeConversion()
+{
+    char x = 'A';
+    int y;
+    y = (int)x; // Explicit Type Conversion
+
+    printf("%c, %d", x, y);
+}
+
+void demotionTypeCasting()
+{
+    // Demotion Type Casting
+    int x = 43;
+    char y = x; // Implicit Type Conversion
+    printf("%c",y);
 }
 
 void d_program()
 {
-    int a=5;
-    for(; a >= 1; a++)
-    {
-        int b = 4+a;
-        printf("Inside Scope : %d", b);
-    }
-    printf("\nOutside Scope : %d", b);
+    
 }

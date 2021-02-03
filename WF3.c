@@ -102,6 +102,106 @@ void WF3_Q1_2()
     printf("\n");
 }
 
+void WF3_Q2()
+{
+    int range, count, result = 0, stResult = 1;
+    printf("Enter the Range : ");
+    scanf("%d", &range);
+    printf("\n");
+    for (count = 1; count <= range; count++)
+    {
+        printf("%d ", stResult);
+        result += stResult;
+        if (count != range)
+            printf("+ ");
+        stResult = (stResult * 10) + (count + 1);
+    }
+    printf(" = %d", result);
+}
+
+void WF3_Q3()
+{
+    int range, num, count, result = 0, stResult;
+
+    printf("Enter any Number : ");
+    scanf("%d", &num);
+    stResult = num;
+
+    printf("Enter the Range : ");
+    scanf("%d", &range);
+
+    for (count = 1; count <= range; count++)
+    {
+        printf("%d ", stResult);
+        result += stResult;
+        if (count != range)
+            printf("+ ");
+        stResult = (stResult * 10) + (num);
+    }
+    printf(" = %d", result);
+}
+
+void WF3_Q4()
+{
+    int range, count, inCount, result = 0;
+    printf("Enter the Range : ");
+    scanf("%d", &range);
+    printf("\n");
+    for (count = 1; count <= range; count++)
+    {
+        printf("(");
+        for (inCount = 1; inCount <= count; inCount++)
+        {
+            printf("%d", inCount);
+            if (inCount != count)
+                printf("+");
+            result += inCount;
+        }
+        printf(")");
+
+        if (count != range)
+            printf("+");
+    }
+    printf(" = %d", result);
+}
+
 void d_program()
 {
+    int num, range, count, inCount, result = 0, stResult = 0, pwResult = 1, asstResult;
+
+    printf("Enter a Number : ");
+    scanf("%d", &num);
+    printf("Enter the Range : ");
+    scanf("%d", &range);
+    printf("\n\n");
+    for (count = 0; count <= range; count++)
+    {
+        printf("{%d+%d^(%d+%d)}",
+               count, num, count + 1, num);
+        if (count != range)
+            printf("+");
+    }
+    printf("\n\n= ");
+    for (count = 0; count <= range; count++)
+    {
+        printf("(%d^%d)", count + num, (count + 1) + num);
+        if (count != range)
+            printf("+");
+    }
+    printf("\n\n= ");
+    for (count = 0; count <= range; count++)
+    {
+        asstResult = 1;
+        stResult = count + num;
+        pwResult = (count + 1) + num;
+        for (inCount = 1; inCount <= pwResult; inCount++)
+        {
+            asstResult *= stResult;
+        }
+        printf("(%d)", asstResult);
+        result += asstResult;
+        if(count != range)
+            printf("+");
+    }
+    printf("\n\n= %d", result);
 }

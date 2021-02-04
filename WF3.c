@@ -1,6 +1,6 @@
 #include "drb.h"
 
-void yShape()
+void WF3_Q7()
 {
     int count, inCount, range = 3;
 
@@ -165,7 +165,7 @@ void WF3_Q4()
     printf(" = %d", result);
 }
 
-void d_program()
+void WF3_Q5()
 {
     int num, range, count, inCount, result = 0, stResult = 0, pwResult = 1, asstResult;
 
@@ -174,22 +174,22 @@ void d_program()
     printf("Enter the Range : ");
     scanf("%d", &range);
     printf("\n\n");
-    for (count = 0; count <= range; count++)
+    for (count = 0; count < range; count++)
     {
         printf("{%d+%d^(%d+%d)}",
                count, num, count + 1, num);
-        if (count != range)
+        if (count != (range - 1))
             printf("+");
     }
     printf("\n\n= ");
-    for (count = 0; count <= range; count++)
+    for (count = 0; count < range; count++)
     {
         printf("(%d^%d)", count + num, (count + 1) + num);
-        if (count != range)
+        if (count != (range - 1))
             printf("+");
     }
     printf("\n\n= ");
-    for (count = 0; count <= range; count++)
+    for (count = 0; count < range; count++)
     {
         asstResult = 1;
         stResult = count + num;
@@ -200,8 +200,72 @@ void d_program()
         }
         printf("(%d)", asstResult);
         result += asstResult;
-        if(count != range)
+        if (count != (range - 1))
             printf("+");
     }
     printf("\n\n= %d", result);
+}
+
+void FizzBuzzOP()
+{
+    for (int count = 1; count <= 100; count++)
+    {
+        if (count % 5 == 0)
+            printf("Buzz");
+        if (count % 3 == 0)
+            printf("Fizz");
+        if (count % 3 != 0 && count % 5 != 0)
+            printf("%d", count);
+        printf("\n");
+    }
+}
+
+void FizzBuzz()
+{
+    int count;
+    for (count = 1; count <= 100; count++)
+    {
+        if (count % 15 == 0)
+            printf("FizzBuzz");
+        else if (count % 3 == 0)
+            printf("Fizz");
+        else if (count % 5 == 0)
+            printf("Buzz");
+        else
+            printf("%d", count);
+
+        printf("\n");
+    }
+}
+
+void FizzBuzzNextLevelXD()
+{
+    int d3 = 0, d5 = 0, count;
+
+    for (count = 1; count <= 100; count++)
+    {
+        printf("\n");
+        d3++;
+        d5++;
+        if (d3 != 3 && d5 != 5)
+        {
+            printf("%d", count);
+            continue;
+        }
+        if (d3 == 3)
+        {
+            printf("Fizz");
+            d3 = 0;
+        }
+        if (d5 == 5)
+        {
+            printf("Buzz");
+            d5 = 0;
+        }
+    }
+}
+
+void d_program()
+{
+   
 }

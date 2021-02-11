@@ -265,7 +265,25 @@ void FizzBuzzNextLevelXD()
     }
 }
 
+
 void d_program()
 {
-   
+    int count = 1, inCount, range, result = 0, stResult;
+
+    printf("Enter the Range : ");
+    scanf("%d", &range);
+
+    while (count <= range)
+    {
+        inCount = 1;
+        stResult = 1;
+        while(inCount <= count)
+        {
+            stResult *= inCount; 
+            inCount++;
+        }
+        result += stResult;
+        count++;
+    }
+    printf("%d", result);
 }

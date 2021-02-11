@@ -181,9 +181,9 @@ void primeNumberRange()
     printf("\n\n-----------------------\n");
 }
 
-void summationPrimeCheck()
+void d_program()
 {
-    printf("\n-----------------------\n\n");
+    // printf("\n-----------------------\n\n");
 
     int newNum_count, inputCheck_pc, sum = 0;
     printf("--Enter any alphabetic value to stop--\n");
@@ -224,7 +224,7 @@ void summationPrimeCheck()
         printf("\nThe Summation is not valid..");
     }
 
-    printf("\n\n-----------------------\n");
+    // printf("\n\n-----------------------\n");
 }
 
 int primeChecker(int newNum)
@@ -685,7 +685,3 @@ void demotionTypeCasting()
     printf("%c",y);
 }
 
-void d_program()
-{
-    
-}

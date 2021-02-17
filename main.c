@@ -682,6 +682,61 @@ void demotionTypeCasting()
     // Demotion Type Casting
     int x = 43;
     char y = x; // Implicit Type Conversion
-    printf("%c",y);
+    printf("%c", y);
 }
 
+void ajiLxND()
+{
+    printf("\n");
+    createSymbol(3, ' ');
+    createSymbol(1, '.');
+    createSymbol(3, ' ');
+    printf("\n");
+    createSymbol(2, ' ');
+    createSymbol(1, '.');
+    createSymbol(1, ' ');
+    createSymbol(1, '.');
+    createSymbol(2, ' ');
+    printf("\n");
+    for (int count = 1; count <= 6; count++)
+    {
+        if (count == 1)
+        {
+            createSymbol(2, ' ');
+            createSymbol(3, '.');
+            createSymbol(2, ' ');
+        }
+        else
+        {
+            createSymbol(2, ' ');
+            createSymbol(1, '.');
+            createSymbol(1, ' ');
+            createSymbol(1, '.');
+            createSymbol(2, ' ');
+        }
+        printf("\n");
+    }
+    createSymbol(1, ' ');
+    createSymbol(1, '.');
+    createSymbol(3, ' ');
+    createSymbol(1, '.');
+    printf("\n");
+    createSymbol(1, '.');
+    createSymbol(5, ' ');
+    createSymbol(1, '.');
+    printf("\n");
+    createSymbol(1, '.');
+    createSymbol(2, ' ');
+    createSymbol(1, '.');
+    createSymbol(2, ' ');
+    createSymbol(1, '.');
+    printf("\n");
+    createSymbol(1, ' ');
+    createSymbol(1, '.');
+    createSymbol(1, ' ');
+    createSymbol(1, '.');
+    createSymbol(1, ' ');
+    createSymbol(1, '.');
+    printf("\n");
+    printf("\n\n");
+}

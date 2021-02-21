@@ -67,7 +67,61 @@ void ptrnVertical(int count, char sign, int inCount)
     }
 }
 
-void d_program()
+void ptrnMain()
 {
     ptrnVertical(5, '1', 1);
+}
+
+void add(int x, int maxLength)
+{
+    static int result;
+    if (maxLength >= 0)
+    {
+        if (maxLength == 0)
+        {
+            printf("Result : %d\n", result);
+            result = 0;
+        }
+        else
+            result += x;
+        add(x, --maxLength);
+    }
+}
+
+void test()
+{
+    add(2, 5);
+    printf("------------\n");
+    add(3, 4);
+    printf("------------\n");
+    add(2, 8);
+    printf("------------\n");
+    add(3, 2);
+}
+
+int primeCounter = 0, reccursionCounter = 0, primeStNum = 0;
+
+int primeChecker(int num)
+{
+    if (reccursionCounter == 0)
+        primeStNum = num;
+
+    if (num != 0)
+    {
+        if (primeStNum % num == 0)
+            primeCounter++;
+        reccursionCounter++;
+        primeChecker(--num);
+        if (primeCounter <= 2)
+            num = 1;
+        else
+            num = 0;
+    }
+
+    return num;
+}
+
+void d_program()
+{
+    printf("%d", primeChecker(7));
 }

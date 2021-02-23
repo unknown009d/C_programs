@@ -14,14 +14,7 @@ void q1()
         count++;
     } while (count < range);
 
-    count = 0;
-    small = 0;
-    do
-    {
-        if (small < a[count])
-            small = a[count];
-        count++;
-    } while (count < range);
+    small = a[0];
 
     count = 0;
     do
@@ -112,7 +105,76 @@ void q3()
     printf("\n\nThe Second Largest Number in this array is %d", sLarge);
 }
 
+void q4()
+{
+    int a[10][10], range, c, cp, smNum, smNum2;
+
+    printf("Enter the range : ");
+    scanf("%d", &range);
+
+    printf("\nEnter the elements of the 2D array : \n");
+    c = 0;
+    do
+    {
+        cp = 0;
+        do
+        {
+            printf("\na[%d][%d] : ", c, cp);
+            scanf("%d", &a[c][cp]);
+            cp++;
+        } while (cp < range);
+        c++;
+    } while (c < range);
+
+    smNum = a[0][0];
+    c = 0;
+    do
+    {
+        cp = 0;
+        do
+        {
+            if (smNum > a[c][cp])
+                smNum = a[c][cp];
+            cp++;
+        } while (cp < range);
+        c++;
+    } while (c < range);
+
+    c = 0;
+    do
+    {
+        cp = 0;
+        do
+        {
+            if (a[c][cp] != smNum)
+                smNum2 = a[c][cp];
+            goto endL;
+            cp++;
+        } while (cp < range);
+        c++;
+    } while (c < range);
+
+endL:
+    c = 0;
+    do
+    {
+        cp = 0;
+        do
+        {
+            if (a[c][cp] != smNum)
+            {
+                if (smNum2 > a[c][cp])
+                    smNum2 = a[c][cp];
+            }
+            cp++;
+        } while (cp < range);
+        c++;
+    } while (c < range);
+
+    printf("\nSecond Smallest Number is : %d", smNum2);
+}
+
 void d_program()
 {
-    q3();
+    q4();
 }

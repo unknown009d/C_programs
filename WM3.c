@@ -65,13 +65,13 @@ int armStrongNumber(int data, int count)
     return armStrongNumber(data /= 10, ++count);
 }
 
-void armStrongRange(int inpVal, int numRange)
+void armStrongRange(int initial, int hiRange)
 {
-    if (inpVal > numRange)
+    if (initial > hiRange)
         return;
-    int chkArmStrong = armStrongNumber(inpVal, 0);
-    chkArmStrong ? debug(inpVal) : putchar(0);
-    armStrongRange(++inpVal, numRange);
+    int chkArmStrong = armStrongNumber(initial, 0);
+    chkArmStrong ? debug(initial) : putchar(0);
+    armStrongRange(++initial, hiRange);
 }
 
 void d_program()

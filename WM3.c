@@ -65,9 +65,17 @@ int armStrongNumber(int data, int count)
     return armStrongNumber(data /= 10, ++count);
 }
 
+void armStrongRange(int inpVal, int numRange)
+{
+    if (inpVal > numRange)
+        return;
+    int chkArmStrong = armStrongNumber(inpVal, 0);
+    chkArmStrong ? debug(inpVal) : putchar(0);
+    armStrongRange(++inpVal, numRange);
+}
+
 void d_program()
 {
-    int inpVal = input("Enter any number : ");
-    int chkArmStrong = armStrongNumber(inpVal, 0);
-    chkArmStrong ? printf("\nArmStrong.") : printf("Not ArmStrong");
+    int inpRange = input("Enter the range starting from 10 to ");
+    armStrongRange(10, inpRange);
 }

@@ -174,7 +174,15 @@ endL:
     printf("\nSecond Smallest Number is : %d", smNum2);
 }
 
+/* ArmStrong */
+
+int findLenth(int num)
+{
+    if (num == 0) return num;
+    return 1 + findLenth(num /= 10);
+}
+
 void d_program()
 {
-    q4();
+      debug(findLenth(12));
 }

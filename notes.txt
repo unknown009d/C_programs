@@ -22,3 +22,5 @@ Technique :
                                                     is truncation.
 
 **First Programmer : Ada Lovelace! **REMEMBER**
+
+LOL

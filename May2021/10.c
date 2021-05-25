@@ -104,6 +104,13 @@ int sNodeSearch(sNode *data, int value)
     return retVal;
 }
 
+int sNodeCount(sNode *data)
+{
+    if (data->link == NULL)
+        return 1;
+    return 1 + sNodeCount(data->link);
+}
+
 void d_program()
 {
     int findRoll, rollPos = 0;
@@ -113,9 +120,35 @@ void d_program()
     addNode(a, a);
     printf("\nThe List is : \n");
     sNodeTraverse(a);
-    printf("\n\nEnter the Roll Number To Search : ");
-    scanf("%d", &findRoll);
-    sNodeSearch(a, findRoll)
-        ? printf("\nRoll Number %d Found.", findRoll)
-        : printf("\nRoll Number Not Found.");
+    printf("\n\nNumber of items in the list : %d", sNodeCount(a));
 }
+
+// struct SLL * Insert(struct SLL *in)
+// {
+//     int k;
+//     struct SLL *t,*p;
+//     t=(struct SLL *)malloc(sizeof(struct SLL));
+//     printf("\nEnter an element for new node:");
+//     scanf("%d",&t->v);
+
+//     printf("\nEnter the key element(0 for last node):");
+//     scanf("%d",&k);
+//     if(k==in->v)
+//     {
+//         t->n=in;
+//         in=t;
+//     }
+//     else if(k!=0)
+//     {
+//         p=prev_node(in,k);
+//         t->n=p->n;
+//         p->n=t;
+//     }
+//     else
+//     {
+//         p=last_node(in);
+//         p->n=t;
+//         t->n=NULL;
+//     }
+//     return in;
+// }
